@@ -1,0 +1,109 @@
+.container{
+    padding-bottom: 350px;
+}
+/* styles.css */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #2ecc71;
+    display: inline-block;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.history {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history h3 {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.timeline {
+    padding-left: 20px;
+    border-left: 3px solid #2ecc71;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event .date {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+.mission-vision {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission, .vision {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.8rem;
+    color: #2ecc71;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.executive-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+  
+}

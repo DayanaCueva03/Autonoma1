@@ -1,0 +1,47 @@
+.container{
+    display: grid;
+    justify-items: center;
+    
+}
+
+img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+}
+footer {
+    background: linear-gradient(135deg, #333, #111);
+    color: #f8f9fa;
+    position: relative;
+}
+
+footer h4 {
+    font-weight: 900;
+    color: #f8f9fa;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00bfae; /* Color para hover en enlaces */
+}
+
+footer .social-icons a {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+footer .border-top {
+    border-top: 1px solid #a11818;
+}
