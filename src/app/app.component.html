@@ -20,8 +20,30 @@
             <a class="nav-link" routerLink="contact" [ngClass]="{active: menuOption == 'contact'}"
               (click)="onOption('contact')">Nosotros</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="todos" [ngClass]="{active: menuOption == 'todos'}"
+              (click)="onOption('todos')">Formulario</a>
+          </li>
+          
   
         </ul>
+      </div>
+      <div class="d-flex">
+        <button class="btn btn-outline-success"
+         type="button"
+         routerLink="/login"
+         *ngIf="!isLogged();else elseTemplate">
+         Iniciar Sesión</button>
+         
+         <ng-template #elseTemplate>
+          <button
+           class="btn btn-outline-danger"
+         type="button"
+         (click)="onClickLogout()"
+        >
+         Cerrar Sesión</button>
+          </ng-template>
       </div>
     </div>
   </nav>

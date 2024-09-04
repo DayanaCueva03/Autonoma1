@@ -1,0 +1,64 @@
+<!-- todos.component.html -->
+<div class="container-fluid text-center" style="max-width: 400px; margin-top: 50px;">
+    <form [formGroup]="form"
+          style="background-color: #f0f9f4; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+      <h2 style="color: #2d6a4f; margin-bottom: 20px;">Formulario de Registro</h2>
+  
+      <div class="mb-3">
+        <label for="email" class="form-label" style="color: #2d6a4f;">Correo</label>
+        <input type="email"
+               class="form-control"
+               id="email" 
+               formControlName="email" 
+               placeholder="Introduce tu correo"
+               [ngClass]="{'is-invalid': form.get('email')?.invalid && form.get('email')?.touched}"
+               style="border: 1px solid #95d5b2;">
+        <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="invalid-feedback">
+          <div *ngIf="form.get('email')?.errors?.['required']">El correo es obligatorio</div>
+          <div *ngIf="form.get('email')?.errors?.['email']">El correo debe ser válido</div>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label" style="color: #2d6a4f;">Contraseña</label>
+        <input type="password"
+               class="form-control"
+               id="password" 
+               formControlName="password"
+               placeholder="Introduce tu contraseña"
+               [ngClass]="{'is-invalid': form.get('password')?.invalid && form.get('password')?.touched}"
+               style="border: 1px solid #95d5b2;">
+        <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="invalid-feedback">
+          <div *ngIf="form.get('password')?.errors?.['required']">La contraseña es obligatoria</div>
+          <div *ngIf="form.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 7 caracteres</div>
+        </div>
+      </div>
+  
+      <div style="margin-top: 20px;">
+        <button 
+          class="btn btn-success" 
+          type="button" 
+          (click)="validateForm()"
+          style="background-color: #52b788; border-color: #52b788; margin-inline: 10px;">Registrarme</button>
+        <button 
+          class="btn btn-outline-success" 
+          type="button" 
+          routerLink="todos"
+          (click)="validateForm()"
+          style="border-color: #95d5b2; color: #2d6a4f; margin-inline: 10px;">Iniciar Sesión</button>
+        <br><br>
+        <button 
+          class="btn btn-outline-success" 
+          type="button"
+          (click)="onClickLoginGoogle()" 
+          style="border-color: #95d5b2; color: #2d6a4f; margin-inline: 10px;">Iniciar Sesión con Google</button>
+      </div>
+    </form>
+    <br>
+    <div class="image-container">
+      <img src="https://tiendaorganica.com.mx/wp-content/uploads/2020/07/Tienda-organica-logo.png" alt="Imagen descriptiva" class="img-fluid" style="width: 100%; height: auto;">
+      <br><br>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  
